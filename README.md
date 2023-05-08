@@ -204,36 +204,52 @@ output "tls_private_key" {
 # Initialize Terraform
 
 ### Run terraform init to initialize the Terraform deployment. This command downloads the Azure provider required to manage your Azure resources.
-- terraform init -upgrade
+```js 
+terraform init -upgrade
+```
 
 # Create a Terraform execution plan
 
 ### Run terraform plan to create an execution plan.
-- terraform plan -out main.tfplan
+```js
+terraform plan -out main.tfplan
+```
 
 # Apply a Terraform execution plan
 
 ### Run terraform apply to apply the execution plan to your cloud infrastructure.
-- terraform apply main.tfplan
+```js 
+terraform apply main.tfplan
+```
 
 # Verify the results
 
 ### Run terraform output to get the SSH private key and save it to a file.
-- terraform output -raw tls_private_key > id_rsa
+```js 
+terraform output -raw tls_private_key > id_rsa
+```
 
 ### Run terraform output to get the virtual machine public IP address.
 
-- terraform output public_ip_address
+```js 
+terraform output public_ip_address
+```
 
 ### Use SSH to connect to the virtual machine.
 
-- ssh -i id_rsa azureuser@<public_ip_address>
+```js 
+ssh -i id_rsa azureuser@<public_ip_address>
+```
 
 # Clean up resources
 
 ### Run terraform plan and specify the destroy flag.
-- terraform plan -destroy -out main.destroy.tfplan
+```js 
+terraform plan -destroy -out main.destroy.tfplan
+```
 
 ### Run terraform apply to apply the execution plan.
 
-- terraform apply main.destroy.tfplan
+```js 
+terraform apply main.destroy.tfplan
+```
