@@ -1,4 +1,4 @@
-# terraform-azure
+# terraform-azure | Linux VM
 
 # Implement the Terraform code
 
