@@ -1,6 +1,8 @@
 # terraform-azure
 
+<span style="color:yellow">
 # Implement the Terraform code
+</span>
 
 - Create a directory in which to test the sample Terraform code and make it the current directory.
 
