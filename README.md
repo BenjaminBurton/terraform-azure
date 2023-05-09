@@ -2,7 +2,7 @@
 
 # Implement the Terraform code
 
-> Create a directory in which to test the sample Terraform code and make it the current directory.
+> Create a directory in which to test the sample `Terraform` code and make it the current directory.
 
 > Create a file named providers.tf and insert the following code:
 
