@@ -4,7 +4,7 @@
 
 > Create a directory in which to test the sample `Terraform` code and make it the current directory.
 
-> Create a file named providers.tf and insert the following code:
+> Create a file named `providers.tf` and insert the following code:
 
 ```js
 terraform {
@@ -32,7 +32,7 @@ provider "azurerm" {
 
 ```
 
-> Create a file named main.tf and insert the following code:
+> Create a file named `main.tf` and insert the following code:
 
 ```js
 resource "random_pet" "rg_name" {
@@ -168,7 +168,7 @@ resource "azurerm_linux_virtual_machine" "my_terraform_vm" {
 }
 ```
 
-> Create a file named variables.tf and insert the following code
+> Create a file named `variables.tf` and insert the following code
 
 ```js
 variable "resource_group_location" {
@@ -184,7 +184,7 @@ variable "resource_group_name_prefix" {
 }
 ```
 
-> Create a file named outputs.tf and insert the following code:
+> Create a file named `outputs.tf` and insert the following code:
 
 ```js
 output "resource_group_name" {
@@ -203,7 +203,7 @@ output "tls_private_key" {
 
 # Initialize Terraform
 
-> Run terraform init to initialize the Terraform deployment. This command downloads the Azure provider required to manage your Azure resources.
+> Run terraform init to initialize the `Terraform` deployment. This command downloads the `Azure provider` required to manage your `Azure resources`.
 
 ```js 
 terraform init -upgrade
@@ -211,7 +211,7 @@ terraform init -upgrade
 
 # Create a Terraform execution plan
 
-> Run terraform plan to create an execution plan.
+> Run `terraform` plan to create an execution plan.
 
 ```js
 terraform plan -out main.tfplan
@@ -219,7 +219,7 @@ terraform plan -out main.tfplan
 
 # Apply a Terraform execution plan
 
-> Run terraform apply to apply the execution plan to your cloud infrastructure.
+> Run `terraform` apply to apply the execution plan to your `cloud infrastructure`.
 
 ```js 
 terraform apply main.tfplan
@@ -227,19 +227,19 @@ terraform apply main.tfplan
 
 # Verify the results
 
-> Run terraform output to get the SSH private key and save it to a file.
+> Run terraform output to get the `SSH` private key and save it to a file.
 
 ```js 
 terraform output -raw tls_private_key > id_rsa
 ```
 
-> Run terraform output to get the virtual machine public IP address.
+> Run terraform output to get the `virtual machine public IP address`.
 
 ```js 
 terraform output public_ip_address
 ```
 
-> Use SSH to connect to the virtual machine.
+> Use `SSH` to connect to the virtual machine.
 
 ```js 
 ssh -i id_rsa azureuser@<public_ip_address>
@@ -247,12 +247,12 @@ ssh -i id_rsa azureuser@<public_ip_address>
 
 # Clean up resources
 
-> Run terraform plan and specify the destroy flag.
+> Run `terraform plan` and specify the destroy flag.
 ```js 
 terraform plan -destroy -out main.destroy.tfplan
 ```
 
-> Run terraform apply to apply the execution plan.
+> Run `terraform apply` to apply the execution plan.
 
 ```js 
 terraform apply main.destroy.tfplan
